@@ -37,7 +37,7 @@ public class BasePage {
         }
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.navigate().to(loadProperty("URL"));
+        driver.navigate().to(loadProperty("url"));
         driver.manage().timeouts().implicitlyWait(DELAY, TimeUnit.SECONDS);
         webDriverThreadLocal.set(driver);
     }
