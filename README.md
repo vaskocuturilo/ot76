@@ -4,7 +4,7 @@
 
 ## Steps:
 
-- Open page http://www.ot76.ru/
+- Open pages http://www.ot76.ru/
 
 - Check all UI critical modules
 

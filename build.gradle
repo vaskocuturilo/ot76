@@ -23,7 +23,7 @@ ext {
     aspectjweaverVersion = '1.8.13'
     testngVersion = '6.13.1'
     seleniumJavaVersion = '3.8.1'
-    webdrivermanagerVersion = '2.0.1'
+    webdrivermanagerVersion = '3.4.0'
     ownerVersion = '1.0.9'
     lombokVersion = '1.16.18'
     streamExVersion = '0.6.6'
