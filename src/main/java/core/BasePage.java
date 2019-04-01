@@ -10,7 +10,11 @@ import java.util.concurrent.TimeUnit;
 
 import static utils.PropertiesReader.loadProperty;
 
+/**
+ * Class BasePage.
+ */
 public class BasePage {
+
     /**
      * Value webDriverThreadLocal.
      */
@@ -19,10 +23,21 @@ public class BasePage {
      * Constant DELAY.
      */
     private static final int DELAY = 10;
+
     /**
      * Value driver.
      */
     protected WebDriver driver;
+
+
+    /**
+     * Method getDriver.
+     *
+     * @return driver;
+     */
+    public WebDriver getDriver() {
+        return driver;
+    }
 
     /**
      * Method Start.

@@ -3,9 +3,12 @@ package browser;
 import io.github.sskorol.config.XmlConfig;
 import io.github.sskorol.core.Browser;
 import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+
+/**
+ * Class Firefox.
+ */
 public class Firefox implements Browser {
 
     public Browser.Name name() {

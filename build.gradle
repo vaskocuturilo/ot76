@@ -37,6 +37,9 @@ ext {
     powermockModuleTestngVersion = '2.0.0-beta.5'
     assertjVersion = '3.8.0'
     findbugsVersion = '3.0.1'
+    RestAssuredVersion = '3.2.0'
+    RestAssuredJsonVersion = '3.0.5'
+    RestAssuredSchemaValidatorVersion = '3.0.5'
 }
 
 dependencies {
@@ -56,7 +59,11 @@ dependencies {
             "org.powermock:powermock-api-mockito2:${powermockApiMockito2Version}",
             "org.powermock:powermock-module-testng:${powermockModuleTestngVersion}",
             "org.assertj:assertj-core:${assertjVersion}",
-            "com.google.code.findbugs:findbugs:${findbugsVersion}"
+            "com.google.code.findbugs:findbugs:${findbugsVersion}",
+            "io.rest-assured:rest-assured:${RestAssuredVersion}",
+            "io.rest-assured:json-path:${RestAssuredJsonVersion}",
+            "io.rest-assured:json-schema-validator:${RestAssuredSchemaValidatorVersion}"
+
     )
 }
 
@@ -79,7 +86,7 @@ test {
     }
 
     systemProperty 'allure.results.directory', 'build/allure-results'
-  }
+}
 
 test.dependsOn copyConfig
 

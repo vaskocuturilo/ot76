@@ -5,16 +5,28 @@ import org.openqa.selenium.support.PageFactory;
 
 public class PageObject {
 
-    WebDriver driver;
+    /**
+     * Private driver.
+     */
+    private final WebDriver driver;
+
+    /**
+     * getter.
+     *
+     * @return return. driver
+     */
+    public final WebDriver getDriver() {
+        return driver;
+    }
+
 
     /**
      * Instantiates a new Page object.
      *
-     * @param driver the driver
+     * @param webDriver the driver
      */
-    PageObject(final WebDriver driver) {
-        this.driver = driver;
-
-        PageFactory.initElements(driver, this);
+    PageObject(final WebDriver webDriver) {
+        this.driver = webDriver;
+        PageFactory.initElements(webDriver, this);
     }
 }

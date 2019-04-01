@@ -9,16 +9,16 @@ public class ReceiptPage extends PageObject {
     /**
      * Instantiates a new Page object.
      *
-     * @param driver the driver
+     * @param webDriver the driver
      */
-    ReceiptPage(WebDriver driver) {
-        super(driver);
+    public ReceiptPage(WebDriver webDriver) {
+        super(webDriver);
     }
 
     /**
      * FindBy annotation header.
      */
-    @FindBy(tagName = "p")
+    @FindBy(css = "div[id='tmenu']")
     private WebElement header;
 
     /**
@@ -28,6 +28,10 @@ public class ReceiptPage extends PageObject {
      */
     public boolean isInit() {
         return header.isDisplayed();
+    }
+
+    public String getTitlePage() {
+        return getDriver().getTitle();
     }
 
     /**

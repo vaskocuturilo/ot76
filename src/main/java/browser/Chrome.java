@@ -5,7 +5,16 @@ import io.github.sskorol.core.Browser;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+/**
+ * Class Chrome.
+ */
 public class Chrome implements Browser {
+
+    /**
+     * Method Name.
+     *
+     * @return chrome.
+     */
     public Name name() {
         return Name.Chrome;
     }
