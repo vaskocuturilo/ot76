@@ -4,10 +4,12 @@ import io.github.sskorol.config.XmlConfig;
 import io.github.sskorol.core.Browser;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
-public class Chrome implements Browser {
-    public Name name() {
-        return Name.Chrome;
+public class Firefox implements Browser {
+
+    public Browser.Name name() {
+        return Browser.Name.Chrome;
     }
 
     @Override
@@ -17,7 +19,7 @@ public class Chrome implements Browser {
 
     @Override
     public Capabilities configuration(final XmlConfig config) {
-        final ChromeOptions options = new ChromeOptions();
+        final FirefoxOptions options = new FirefoxOptions();
         options.setCapability("enableVNC", true);
         options.setCapability("enableVideo", true);
         options.setCapability("name", config.getTestName());

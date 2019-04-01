@@ -1,0 +1,17 @@
+package core;
+
+
+import org.aeonbits.owner.Config;
+import org.aeonbits.owner.ConfigFactory;
+import org.aeonbits.owner.Reloadable;
+
+@Config.LoadPolicy(Config.LoadType.MERGE)
+@Config.Sources("classpath:test.properties")
+public interface BaseConfig extends Config, Reloadable {
+
+    BaseConfig BASE_CONFIG = ConfigFactory.create(BaseConfig.class, System.getenv(), System.getProperties());
+
+    @Key("url")
+    @DefaultValue("http://localhost")
+    String url();
+}
