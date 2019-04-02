@@ -8,6 +8,9 @@ group 'ru.ot76'
 version '1.0'
 
 apply plugin: 'java'
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+javadoc.options.encoding = 'UTF-8'
 
 sourceCompatibility = 1.8
 
@@ -65,10 +68,6 @@ dependencies {
             "io.rest-assured:json-schema-validator:${RestAssuredSchemaValidatorVersion}"
 
     )
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion '4.3.1'
 }
 
 task copyConfig(type: Copy) {
