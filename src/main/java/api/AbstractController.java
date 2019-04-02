@@ -15,16 +15,12 @@ public class AbstractController {
 
     static {
         RestAssured.requestSpecification = new RequestSpecBuilder()
-                .addHeader("Content-type", "application/json; charset=UTF-8")
+                .addHeader("Content-type", "application/text; charset=cp1251")
                 .setBaseUri("http://www.ot76.ru/")
-                .setContentType(ContentType.JSON)
                 .log(LogDetail.ALL).build();
 
         RestAssured.responseSpecification = new ResponseSpecBuilder()
-                .expectContentType(ContentType.JSON)
                 .expectResponseTime(Matchers.lessThan(15000L))
                 .build();
-
-        RestAssured.defaultParser = Parser.JSON;
     }
 }
