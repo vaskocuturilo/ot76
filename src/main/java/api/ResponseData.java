@@ -20,14 +20,18 @@ public class ResponseData extends AbstractController {
      */
     private RequestSpecBuilder specBuilder = new RequestSpecBuilder()
             .addHeader("Content-type", "application/text; charset=cp1251")
-            .setBasePath("getroute.php");
+            .setBasePath("");
 
     /**
      * Method getData.
+     *
+     * @param typeRoute   typeRoute.
+     * @param numberRoute numberRoute.
      */
-    public void getData(final int typeRoute, final int numberRoute) {
-        given(specBuilder.build()).get("?vt=" + typeRoute + "&r=" + numberRoute).then()
+    public ResponseData getData(final int typeRoute, final int numberRoute) {
+        given(specBuilder.build()).get("getroute.php?vt=" + typeRoute + "&r=" + numberRoute).then()
                 .statusCode(SUCCESS).assertThat()
-                .body("$", not(empty()));
+                .body("", not(emptyArray()));
+        return this;
     }
 }

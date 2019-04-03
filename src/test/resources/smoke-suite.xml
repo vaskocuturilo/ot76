@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Sanity tests">
-    <test name="Sanity tests">
+<suite name="Smoke and sanity automation scripts">
+    <test name="Smoke automation scripts">
         <packages>
             <package name="tests.*"/>
         </packages>

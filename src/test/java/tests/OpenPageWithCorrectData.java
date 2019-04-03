@@ -22,6 +22,8 @@ public class OpenPageWithCorrectData extends BasePage {
         MainPage mainPage = new MainPage(driver);
         assertTrue(mainPage.checkMenu());
         assertTrue(mainPage.checkMap());
+        assertEquals(mainPage.mapShouldHaveSize(), 29);
+        assertEquals(mainPage.rightMenuShouldHaveSize(), 5);
     }
 
 }
