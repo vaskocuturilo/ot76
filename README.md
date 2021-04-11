@@ -23,11 +23,5 @@ Execute command
 to run test ```gradle clean test```
 to generate report ```gradle allureReport, gradle allureServe```
 
-![]()
-
-![]()
-
-![]()
-
-![]()
+![](https://a.radikal.ru/a30/1902/ca/3e7479798fca.png)
 
